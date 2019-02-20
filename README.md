@@ -24,10 +24,20 @@
 
 or
 
-In your **build.gradle**
-
+Add it in your root build.gradle at the end of repositories:
 ```gradle
-compile 'com.flying.xiaopo:sticker:1.6.0'
+allprojects {
+        repositories {
+                ...
+                maven { url 'https://jitpack.io' }
+        }
+}
+```
+Add the dependency
+```gradle
+dependencies {
+        implementation 'com.github.alvinzhangyuntian:StickerView:Tag'
+}
 ```
 
 **Tips**:StickerView extends FrameLayout
