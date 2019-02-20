@@ -6,102 +6,92 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.xiaopo.flying.stickerview.MainActivity"
     >
 
-  <android.support.v7.widget.Toolbar
-      android:id="@+id/toolbar"
-      android:layout_width="match_parent"
-      android:layout_height="56dp"
-      android:background="@color/colorPrimary"
-      >
-
-  </android.support.v7.widget.Toolbar>
-
-  <com.xiaopo.flying.sticker.StickerView
-      android:id="@+id/sticker_view"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_gravity="center"
-      android:layout_weight="1"
-      app:showBorder="true"
-      app:showIcons="true"
-      >
-
-    <uk.co.senab.photoview.PhotoView
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/haizewang_90"
-        />
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary">
 
-    <ImageView
+    </android.support.v7.widget.Toolbar>
+
+    <com.phonenix.sticker.StickerView
+        android:id="@+id/sticker_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/border"
-        />
-  </com.xiaopo.flying.sticker.StickerView>
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        app:showBorder="true"
+        app:showIcons="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/haizewang_90"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/border" />
+    </com.phonenix.sticker.StickerView>
 
 
-  <HorizontalScrollView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="@android:color/black"
-      android:scrollbars="none"
-      >
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <HorizontalScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-      <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="?attr/selectableItemBackground"
-          android:onClick="reset"
-          android:text="Reset"
-          />
+        android:background="@android:color/black"
+        android:scrollbars="none">
 
-      <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="?attr/selectableItemBackground"
-          android:onClick="testReplace"
-          android:text="Replace"
-          />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-      <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="?attr/selectableItemBackground"
-          android:onClick="testRemove"
-          android:text="Remove"
-          />
+            <Button
+                android:id="@+id/btn_add_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:text="Add Text" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:onClick="testAddImage"
+                android:text="Add Image" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:onClick="testLock"
+                android:text="Lock" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:onClick="reset"
+                android:text="Reset" />
 
-      <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="?attr/selectableItemBackground"
-          android:onClick="testRemoveAll"
-          android:text="RemoveAll"
-          />
 
-      <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="?attr/selectableItemBackground"
-          android:onClick="testLock"
-          android:text="Lock"
-          />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:onClick="testRemove"
+                android:text="Remove" />
 
-      <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:background="?attr/selectableItemBackground"
-          android:onClick="testAdd"
-          android:text="Add"
-          />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:onClick="testRemoveAll"
+                android:text="RemoveAll" />
 
-    </LinearLayout>
-  </HorizontalScrollView>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
 </LinearLayout>

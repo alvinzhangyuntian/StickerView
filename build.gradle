@@ -1,31 +1,41 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-  repositories {
-    jcenter()
-  }
-  dependencies {
-    classpath 'com.android.tools.build:gradle:2.2.3'
-
-//    classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
-//    classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
-    // NOTE: Do not place your application dependencies here; they belong
-    // in the individual module build.gradle files
-  }
+    repositories {
+        google()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+    }
 }
 
 allprojects {
-  repositories {
-    jcenter()
-    maven { url "https://jitpack.io" }
-  }
+    repositories {
+        google()
+        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven.google.com/'
+        }
+        jcenter()
+    }
 }
 
 task clean(type: Delete) {
-  delete rootProject.buildDir
+    delete rootProject.buildDir
 }
 
 ext {
-  supportLibraryVersion = '25.3.1'
-  photoViewVersion = 'v1.2.5'
+    googlePlayServicesAnalyticsVersion = "16.0.3"
+    googlePlayServicesVersion = "15.0.0"
+    firebaseVersion = "17.3.2"
+    firebaseAnalyticsVersion = "16.0.3"
+    supportLibVersion = "28.0.0"
+    comileSDKVer = 28
+    buildToolVer = "27.0.3"
+    photoViewVersion = 'v1.2.5'
 }
