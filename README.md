@@ -1,14 +1,20 @@
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-StickerView-brightgreen.svg?style=flat)]() 
-StickerView
-=========
-
-A view which can add sticker and zoom,drag,flip,delete it
+## 主要功能
+图片和文字贴图<br>
+对贴图进行缩放、拖拽、翻转、删除、编辑等操作（A view which can add sticker and zoom,drag,flip,delete,edit it）<br>
+在原StickerView项目中修改了如下功能：<br>
+1.点击外部隐藏边框<br>
+2.图片和文字贴图按钮添加分开<br>
+3.修改文字贴图逻辑，增加换行和边框贴合（为了多语言和多种字体加大了四周边距）等逻辑<br>
+4.增加取消选中贴图的逻辑<br>
+5.StickerView改变大小，不重置内部贴图<br>
+6.图片sticker支持添加内置图片和手机本地图片<br>
+一些其他细微改动<br>
 
 **I hope you can copy the source code to your project so you can design your own function.**
 
 ## Screenshots
-![](https://github.com/wuapnjie/StickerView/blob/master/screenshots/screenshot1.png)
-![](https://github.com/wuapnjie/StickerView/blob/master/screenshots/screenshot2.png)
+![](https://github.com/alvinzhangyuntian/StickerView/blob/master/screenshots/capture1.jpg)
+![](https://github.com/alvinzhangyuntian/StickerView/blob/master/screenshots/capture2.jpg)
 
 ## Usage
 
@@ -62,16 +68,6 @@ heartIcon.setIconEvent(new HelloIconEvent());
 stickerView.setDrawableStickerIcons(Arrays.asList(deleteIcon, zoomIcon, flipIcon));
 stickerView.setTextStickerIcons(Arrays.asList(zoomIcon, deleteIcon, heartIcon));
 ```
-
-## Update
-在原StickerView项目中修改了如下功能：
-1.点击外部隐藏边框
-2.图片和文字贴图按钮添加分开
-3.修改文字贴图逻辑，增加换行和边框贴合（为了多语言和多种字体加大了四周边距）等逻辑
-4.增加取消选中贴图的逻辑
-5.StickerView改变大小，不重置内部贴图
-6.图片sticker支持添加内置图片和手机本地图片
-一些其他细微改动
 
 
 
