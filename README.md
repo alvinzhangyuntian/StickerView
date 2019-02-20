@@ -40,8 +40,7 @@ compile 'com.flying.xiaopo:sticker:1.6.0'
 </com.xiaopo.flying.sticker.StickerView>
 ```
 #### Add sticker
-If the sticker is drawable, it's intrinsic width and height can not be zero.
-If the sticker is text, you can set text color, font and alignment and the region which holds the text.
+支持图片和文字贴图
 
 ```java
 stickerView.addSticker(sticker)
@@ -52,7 +51,7 @@ stickerView.removeAllStickers()
 stcikerView.setLocked(true)
 ```
 
-Also you can custom the icon and icon event and position
+自定义贴图按钮和按钮事件
 
 ```java
  BitmapStickerIcon heartIcon =
@@ -60,43 +59,19 @@ Also you can custom the icon and icon event and position
             BitmapStickerIcon.LEFT_BOTTOM);
 heartIcon.setIconEvent(new HelloIconEvent());
 
-stickerView.setIcons(Arrays.asList(deleteIcon, zoomIcon, flipIcon, heartIcon));
+stickerView.setDrawableStickerIcons(Arrays.asList(deleteIcon, zoomIcon, flipIcon));
+stickerView.setTextStickerIcons(Arrays.asList(zoomIcon, deleteIcon, heartIcon));
 ```
 
 ## Update
+在原StickerView项目中修改了如下功能：
+1.点击外部隐藏边框
+2.图片和文字贴图按钮添加分开
+3.修改文字贴图逻辑，增加换行和边框贴合（为了多语言和多种字体加大了四周边距）等逻辑
+4.增加取消选中贴图的逻辑
+5.StickerView改变大小，不重置内部贴图
+6.图片sticker支持添加内置图片和手机本地图片
+一些其他细微改动
 
-* **2016/10/11** Add horizontal flip function.
-* **2016/10/12** Add Lock function to disable handle stickers.
-* **2016/11/30** Added text stickers which supports both text and image background. Thanks to [taoliuh](https://github.com/taoliuh).
-* **2016/12/02** Fixed the region of sticker bigger bug,and add more custom configure.
-* **2016/12/03** Add more callback
-* **2016/12/14** Add [PhotoView](https://github.com/chrisbanes/PhotoView) support.
-* **2016/12/15** Add remove methods.
-* **2016/12/16** Add Double Tap Callback
-* **2016/12/17** Add Constrain Sticker's move area
-* **2017/02/07** Custom your icon and icon event
-* **2017/04/25** Fix scale err and add more useful function
-
-## Todo
-- [x] Constrain the sticker's moving area
-- [x] Add Double Tap callback
-
-## Licence
-
-```
-Copyright 2016 wuapnjie
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
 
 
