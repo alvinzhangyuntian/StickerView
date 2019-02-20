@@ -1,9 +1,7 @@
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-StickerView-brightgreen.svg?style=flat)]() 
-StickerView
-=========
-在原作StickerView上做了一些修改
+主要功能:<br>
+图片和文字贴图<br>
+对贴图进行缩放、拖拽、翻转、删除、编辑等操作（A view which can add sticker and zoom,drag,flip,delete,edit it）
 
-A view which can add sticker and zoom,drag,flip,delete it
 
 **I hope you can copy the source code to your project so you can design your own function.**
 
