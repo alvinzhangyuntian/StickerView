@@ -36,7 +36,7 @@ allprojects {
 Add the dependency
 ```gradle
 dependencies {
-        implementation 'com.github.alvinzhangyuntian:StickerView:Tag'
+        implementation 'com.github.alvinzhangyuntian:StickerView:1.1'
 }
 ```
 
