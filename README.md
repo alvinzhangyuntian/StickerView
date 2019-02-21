@@ -43,7 +43,7 @@ dependencies {
 **Tips**:StickerView extends FrameLayout
 #### In layout
 ```xml
-<com.xiaopo.flying.sticker.StickerView
+<com.phonenix.sticker.StickerView
         android:id="@+id/sticker_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -53,7 +53,7 @@ dependencies {
         android:src="@drawable/haizewang_2"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-</com.xiaopo.flying.sticker.StickerView>
+</com.phonenix.sticker.StickerView>
 ```
 #### Add sticker
 支持图片和文字贴图
